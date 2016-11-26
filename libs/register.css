@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a:link {
+  color: none; }
+
+a:hover {
+  color: none; }
+
+.head {
+  width: 100%;
+  height: 50px;
+  background: aqua; }
+
+/*# sourceMappingURL=register.css.map */

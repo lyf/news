@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		
+		<title>搜索结果</title>
+		
+		<link rel="stylesheet" type="text/css" href="plugin/font-awesome-4.6.3/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/search_result.css">
+		<script src="plugin/iscroll/build/iscroll.js" type="text/javascript" ></script>
+		<script src="plugin/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="plugin/angular.min.js"></script>
+		<script type="text/javascript" src="src/js/search_result.js"></script>
+	
+	</head>
+	<body ng-app="search_app" ng-controller="search_con">
+		<!--header-->
+		<header>
+			<div class="heade_first">
+				<a href="javascript:window.history.go(-1)" class="goBack">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+			</div>
+			<div class="heade_second" style="font-size: 16px;">搜索结果:{{search_word}}</div>
+			<div class="heade_third"><i class="glyphicon glyphicon-user"></i></div>
+		</header>
+		
+		<div id="mask" ng-if="mask"></div>
+		<!--content-->
+		<div class="content" infinite-scroll='loadMore()' infinite-scroll-distance="3">
+			<ul class="list-group" >
+	    		<li class="list-group-item" ng-repeat="x in data" ng-click="load_detail(x)">
+	    			<div class={{(x.allList[0].url&&x.allList[1].url)||(x.allList[0].url&&x.allList[2].url)||(x.allList[1].url&&x.allList[2].url||(x.allList[0].url==undefined&&x.allList[1].url==undefined&&x.allList[2].url==undefined))?'title':'title_small'}} >
+	    				<p>{{x.title}}</p>
+	    				<p style="font-size: 10px;color:#333">来源：{{x.source}}</p>
+	    			</div>
+	    			<img src={{x.allList[0].url}} ng-if="x.allList[0].url">
+	    			<img src={{x.allList[1].url}} ng-if="x.allList[1].url">
+	    			<img src={{x.allList[2].url}} ng-if="x.allList[2].url">
+	    			<p style="float:right;font-size: 10px;color:#333">{{x.pubDate}}</p>
+	    		</li>
+	    	<ul>
+		</div>
+		
+		<!--fooster-->
+		<footer>
+			<a href="index.html" class="aElement active">
+				<i class="icon glyphicon glyphicon-home"></i>
+				<strong class="index">主页</strong>
+			</a>
+			<a href="#" class="aElement">
+				<i class="icon glyphicon glyphicon-home"></i>
+				<strong class="index">推荐</strong>
+			</a>
+			<a href="#" class="aElement">
+				<i class="icon glyphicon glyphicon-home"></i>
+				<strong class="index">直播</strong>
+			</a>
+			<a href="center.html" class="aElement">
+				<i class="icon glyphicon glyphicon-home"></i>
+				<strong class="index">个人中心</strong>
+			</a>
+		</footer>
+	</body>
+	
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>详情页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="src/css/common.css"/>
+	<link rel="stylesheet" href="src/css/detaile.css">
+	<link rel="stylesheet" href="plugin/font-awesome-4.6.3/css/font-awesome.min.css">
+
+	<script src="plugin/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src="plugin/angular.min.js"></script>
+	<script type="text/javascript" src="plugin/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="src/js/detaile.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<!-- 这罩层 -->
+	<div id="mask" ng-if="mask"></div>
+
+	<!--页头-->
+	<div id="de_header">
+		<p class="back"><i class=" 	glyphicon glyphicon-chevron-left"></i><a href="javascript:history.go(-1)">返回</a></p>
+		<p id="commonts">816评论</p>
+		<p class="font_set"><i class=" 	glyphicon glyphicon-font"></i></p>
+	</div>
+
+	
+	<!--页面内容-->
+	<div id="de_container" data-ui-view="">
+		<div id="title" ng-bind="title"></div>
+		<div class="word" ng-repeat="x in word" >
+			<p ng-bind="x" ng-if="!judge(x)"></p>
+			<img ng-src="{{x}}" ng-if="judge(x)">
+		</div>
+	</div>
+
+
+	<!--页脚-->
+	<div id="de_footer">
+		<div id="half_px"></div>
+		<p id="edit">写评论，得积分</p>
+		<div id="re_comments" ng-click="click"><a class="fa fa-twitch" href="#/comments"></a>
+		<span id="num">812</span>
+		</div>
+		<div id="collect" class="fa fa-star-o" ng-click="collect()"></div>
+		<div id="share" class="fa fa-share-square-o"></div>
+	</div>
+
+</body>
+</html>

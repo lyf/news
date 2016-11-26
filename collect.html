@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="plugin/font-awesome-4.6.3/css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="src/css/collect.css">
+
+<script type="text/javascript" src="plugin/angular.min.js"></script>
+<script type="text/javascript" src="src/js/collect.js"></script>
+<body ng-app="APP" ng-controller="CON">
+	<div class="head">
+		<span class="fa fa-chevron-left" onclick="javascript:history.go(-1)"></span>
+		<span>我的收藏</span>
+		<span ng-click="edit()">编辑</span>
+	</div>
+	<!-- 收藏内容 -->
+	<div class="content">
+            <div ng-if="hasCollect" style="font-size: 12px;line-height: 30px;width:100%;height:50px;text-align: center">暂无收藏，赶紧去收藏吧`</div>
+<!-- 		<ul class="list-group">
+    		<li class="list-group-item">
+    			<span class={{sel?sel_del:Not_sel_del}} ng-if="show_edit" ng-click="sel_this()"></span>
+    			<img src="http://api.jisuapi.com/news/upload/20161106/090002_49984.jpg">
+    			<div class={{_title?'title':'show_ed'}}>村民山上放羊遭遇狂蟒之灾</div>
+    		</li>
+    	<ul> -->
+
+        <ul class="list-group" ng-repeat='x in collect' init='x.sel=false'>
+            <li class="list-group-item">
+                <span class={{x.sel?sel_del:Not_sel_del}} ng-if="show_edit" ng-click="sel_this(x)"></span>
+                <img src={{x.img[0].url}} ng-if='x.img[0].url'>
+                <div class={{_title?'title':'show_ed'}}>{{x._ntitle}}</div>
+            </li>
+        <ul>
+
+	</div>
+
+	<div id="delete_sel" class={{show_edit?"show":""}}  ng-click="delete_sel()"><span class="glyphicon glyphicon-trash"></span></div>
+</body>
+</html>

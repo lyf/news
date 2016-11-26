@@ -1,0 +1,109 @@
+.header{
+	height: 220px;
+	background-color: #7A99B7;
+	padding: 0;
+}
+.header div{
+	height: 60px;
+	background-color: #627A92;
+	padding: 0;
+}
+.header div:first-child{
+	height: 160px;
+	background-color: #7A99B7;
+}
+.header .col-xs-12{
+	text-align: center;
+	position: relative;
+}
+.header .col-xs-12 span,.header .col-xs-12 em{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 5px;
+}
+.header .col-xs-12>a img{
+	background-color: #ccc;
+	border-radius: 50%;
+	margin-top: 40px;
+}
+.header .col-xs-12>span{
+	left: 10px;
+}
+.header .col-xs-12>em{
+	right: 10px;
+}
+.header .col-xs-12 a,.header .col-xs-12 a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.header .col-xs-4{
+	text-align: center;
+	color: #fff;
+	padding-top: 5px;
+}
+/*----------------------container----------------------*/
+
+.container .table a,.container .table a:hover{
+	text-decoration: none;
+	color: #000;
+}
+.container .table tr{
+	height: 40px;
+	line-height: 40px;
+}
+.container .table td>span{
+	float: right;
+	color: #ccc;
+	height: 15px;
+	width: 10px;
+}
+.container .table td em{
+	background-color: red;
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+/*------------------footer------------------------*/
+footer{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left:0;
+}
+footer::before{
+	content: "";
+	height: 1px;
+	width: 100%;
+	background-color: #ccc;
+	position: absolute;
+	top: 0;
+	transform:scaleY(0.5);
+}
+footer div{
+	height: 100%;
+	text-indent: 30px;
+	text-align: center;
+}
+footer a,footer a:hover{
+	height: 50px;
+	color: #000;
+	text-indent: 30px;
+	text-decoration: none;
+}
+footer a:nth-child(1) div{
+	background: url("../img/index-icon.png") no-repeat 5px 0px;
+}
+footer a:nth-child(2) div{
+	background: url("../img/verdio.png") no-repeat 5px 0px;
+}
+footer a:nth-child(3) div{
+	background: url("../img/love.png") no-repeat 5px 0px;
+}
+footer a:nth-child(4) div{
+	background: url("../img/center.png") no-repeat 5px 0px;
+}

@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" charset = "utf-8">
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="src/css/register.css">
+
+<script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="plugin/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="plugin/jquery-validation-1.15.0/dist/jquery.metadata.js"></script>
+<script type="text/javascript" src="plugin/jquery-validation-1.15.0/dist/jquery.validate.extend.methods.js"></script>
+<script type="text/javascript" src="plugin/jquery-validation-1.15.0/dist/localization/messages_zh.min.js"></script>
+<script type="text/javascript" src="src/js/register.js"></script>
+<body>
+	<div class="head"><span class="glyphicon glyphicon-arrow-left back"></span>天天新闻</div>
+
+	<!-- content -->
+	<div class="content">
+		
+		<form action="#" methods="post" id="register">
+        	<div class="form-group has-feedback">
+			  <label class="control-label" for="inputSuccess2">please input your username</label>
+			  <input type="text" class="form-control" id="username"  name="username" placeholder="用户名为4-10个字符">
+			  <span class="glyphicon  form-control-feedback"></span>
+			</div>
+
+        	<div class="form-group has-feedback">
+			  <label class="control-label" for="inputSuccess2">please input your password</label>
+			  <input type="password" class="form-control" id="password"  name="password" placeholder="密码6-18个字符">
+			  <span class="glyphicon form-control-feedback"></span>
+			</div>
+
+			<div class="form-group has-feedback">
+			  <label class="control-label" for="inputSuccess2">please repeat your password</label>
+			  <input type="password" class="form-control" name="repassword" placeholder="重复输入密码">
+			  <span class="glyphicon form-control-feedback"></span>
+			</div>
+
+			<div class="form-group has-feedback">
+			  <label class="control-label" for="inputSuccess2">please input your email</label>
+			  <input type="text" class="form-control" id="email" name="email" placeholder="请输入如您的E-mail">
+			  <span class="glyphicon  form-control-feedback"></span>
+			</div>
+
+			<div class="form-group has-feedback">
+			  <label class="control-label" for="inputSuccess2">please input your phone number</label>
+			  <input type="text" class="form-control" id="tel" name="tel" placeholder="请输入您的手机">
+			  <span class="glyphicon  form-control-feedback"></span>
+			</div>
+			<div id="hint"></div>
+        	<button type="button" id="submit" class="btn btn-primary btn-lg btn-block" >立即注册</button>
+		</form>
+	</div>
+	<div class="fooster"></div>
+</body>
+</html>

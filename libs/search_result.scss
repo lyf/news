@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+  color: none; }
+a:hover {
+  color: none; }
+
+.searchText{padding: 10px 15px;margin: 10px auto auto;}
+.content{position: absolute;top: 50px;bottom: 55px;overflow: auto;}
+.recommand{width: 100%;overflow: auto;padding: 5px 10px;}
+.recommand>p{line-height: 30px;}
+
+ .content {
+	z-index: 1;
+	position: absolute;
+	top:50px;
+	ul{
+		li{
+			width: 100%;
+			overflow: hidden;
+			div.title{
+				width: 100%;
+				padding: 10px;
+				p:nth-child(1){
+					font-size: 12px;
+				}
+			}
+			div.title_small{
+				width: 60%;
+				float: right;
+			}
+			img{
+				float: left;
+				width: 30%;
+				margin: 1%;
+			}
+		}
+	}
+}

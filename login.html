@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" charset = "utf-8">
+</head>
+<link rel="stylesheet" type="text/css" href="plugin/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="src/css/login.css">
+
+<script type="text/javascript" src="plugin/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="src/js/login.js"></script>
+<body>
+	<!-- head -->
+	<div class="head"><span class="glyphicon glyphicon-arrow-left back"></span>登录</div>
+
+	<!-- content -->
+	<div class="content">
+		<div id="fault_hint"></div>
+		<div class="login">
+			<div class="form-group has-feedback">
+			  <span class="glyphicon glyphicon-user form-control-feedback" style="left:0;top:0"></span>
+			  <input type="text" id="login_username" class="form-control" style="padding-left: 35px;">
+			</div>
+			<div class="form-group has-feedback">
+			  <span class="glyphicon glyphicon-lock form-control-feedback" style="left:0;top:0"></span>
+			  <input type="password" id="password" class="form-control" style="padding-left: 35px;">
+			   <span class="form-control-feedback" style="top:0;width:60px;font-size: 6px">忘记密码？</span>
+			</div>
+		</div>
+		<button type="button" id="login" class="btn btn-default btn-lg btn-block" >立即登录</button>
+		<a href="register.html">
+			<button type="button" id="login" class="btn btn-default btn-lg btn-block" >立即注册</button>
+		</a>
+	</div>
+
+	<!-- fooster -->
+	<div class="fooster"></div>
+</body>
+</html>
